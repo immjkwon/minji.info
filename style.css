@@ -1,1 +1,12 @@
+/* style.css */
+/* 이 CSS 파일은 민지 포트폴리오 페이지의 스타일을 정의합니다. */
+/* 작성자: 민지 */
 
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: navy;
+}
