@@ -1,7 +1,12 @@
 /* style.css */
 /* 이 CSS 파일은 민지 포트폴리오 페이지의 스타일을 정의합니다. */
 /* 작성자: 민지 */
-
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
  html, body {
         position: relative;
         height: 100%;
