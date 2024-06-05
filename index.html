@@ -26,45 +26,106 @@
 	<script src="js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
 
-    <title>권민지 Web design</title>
+	<title>권민지 Web design</title>
+	<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-out;
+}
+
+#splash-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash-screen h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+#main-content {
+    display: none;
+    padding: 20px;
+    position: relative;
+}
+
+#target-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes circle-move {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+	</style>
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide color-1">
-		<div> 
-			
-		</div>
-            </div>
-            <div class="swiper-slide color-2">
-		<div> 
-			<img src="images/NJ_BubbleGum_04.jpg" alt="Left Image">
-		</div>
-	    </div>
-            <div class="swiper-slide color-3">Slide 3</div>
-            <div class="swiper-slide color-4">Slide 4</div>
-            <div class="swiper-slide color-5">Slide 5</div>
-            <div class="swiper-slide color-6">Slide 6</div>
-            <div class="swiper-slide color-2">Slide 7</div>
-            <div class="swiper-slide color-3">Slide 8</div>
-
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
+	<div id="splash-screen">
+	<div id="splash-circle"></div>
+	<h1>Welcome to My Website</h1>
+	</div>
+	<div id="main-content">
+	<!-- Your main content here -->
+	<div id="target-circle"></div>
+	<h2>Main Page</h2>
+	<p>This is the main content of the page.</p>
+	</div>
 
     <script>
-         var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        freeMode: true,
-        paginationClickable: true,
-        spaceBetween: 0,
-        mousewheelControl: true,
-        parallax: true,
-        speed: 800,
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        let splashScreen = document.getElementById('splash-screen');
+        let splashCircle = document.getElementById('splash-circle');
+        let targetCircle = document.getElementById('target-circle');
+        
+        // Start the circle move animation
+        splashCircle.style.animation = 'circle-move 1s forwards';
 
-    });
+        // Wait for the animation to complete before hiding the splash screen and showing the main content
+        splashCircle.addEventListener('animationend', function() {
+            splashScreen.style.opacity = 0;
+            splashScreen.addEventListener('transitionend', function() {
+                splashScreen.style.display = 'none';
+                targetCircle.style.transform = 'translate(-50%, -50%) scale(1)';
+                document.getElementById('main-content').style.display = 'block';
+            });
+        });
+    }, 3000); // 3 seconds delay
+});
+
     </script>
 </body>
 </html>
