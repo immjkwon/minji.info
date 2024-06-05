@@ -48,8 +48,8 @@
         }
         
         #splash-circle {
-            width: 150px; /* 크기 조정 */
-            height: 150px; /* 크기 조정 */
+            width: 300px; /* 크기를 300px로 늘립니다. */
+            height: 300px; /* 크기를 300px로 늘립니다. */
             background-color: #3498db;
             border-radius: 50%;
             position: absolute;
@@ -71,15 +71,15 @@
         }
         
         #target-circle {
-            width: 50px;
-            height: 50px;
+            width: 150px; /* 최종 크기를 150px로 설정합니다. */
+            height: 150px; /* 최종 크기를 150px로 설정합니다. */
             background-color: #3498db;
             border-radius: 50%;
             position: absolute;
             top: 50px; /* Adjust as needed */
             right: 50px; /* Adjust as needed */
-            transform: translate(-50%, -50%);
-            transition: transform 1s ease; /* 추가: 크기 조절 시 애니메이션 */
+            transform: translate(-50%, -50%) scale(0); /* 초기 크기와 투명하게 설정합니다. */
+            transition: transform 1s ease; /* 크기 변화를 부드럽게 애니메이션합니다. */
         }
         
         @keyframes circle-move {
@@ -128,7 +128,7 @@
             // 추가: 메인 화면으로 이동하면서 크기를 조절하는 애니메이션
             targetCircle.style.transform = 'translate(-50%, -50%) scale(0)'; // 초기 크기 조절
             setTimeout(function() {
-                targetCircle.style.transform = 'translate(-50%, -50%) scale(1)'; // 최종 크기 조절
+                targetCircle.style.transform = 'translate(-50%, -50%) scale(0.5)'; // 최종 크기 조절 (150px 크기로)
             }, 1000); // 1초 후 시작하여 1초 동안 애니메이션 진행
         }, 3000); // 3 seconds delay
     });
