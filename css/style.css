@@ -165,7 +165,8 @@ nav a:hover {
 #introduction {
     font-size: 36px; 
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    line-height:1.2;
 }
 
 .additional-text p {
