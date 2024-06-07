@@ -237,4 +237,18 @@ background-color: #555;
     opacity: 1;
     transform: translateY(0);
 }
+.fade-in {
+    opacity: 0;
+    animation: fade-in-animation 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
