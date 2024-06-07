@@ -176,6 +176,44 @@
             border: 1px solid #ccc;
             padding: 10px;
         }
+
+        /* 다크 모드 스타일 */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .dark-mode #splash-circle {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode #splash-screen h1 {
+            color: #ccc;
+        }
+
+        .dark-mode #main-content {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .dark-mode nav {
+            background-color: #111;
+        }
+
+        .dark-mode nav a {
+            color: #fff;
+        }
+
+        .dark-mode #left-side {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode #right-side {
+            background-color: #333;
+            color: #fff;
+        }
+
         /* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
         @media (max-width: 1024px) {
             #main-content {
@@ -195,7 +233,6 @@
                 margin-right: 20px; /* 오른쪽 여백 추가 */
             }
         }
-
     </style>
 </head>
 <body>
@@ -204,7 +241,6 @@
         <h1>Welcome to My Website</h1>
     </div>
     <div id="main-content">
-        <!-- 네비게이션 바 추가 -->
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
