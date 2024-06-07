@@ -29,218 +29,242 @@
     
     <title>권민지 Web design</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans','Open Sans','Roboto', Arial, sans-serif;
-        }
+/* 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans','Open Sans','Roboto', Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
 
-        #splash-screen {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: opacity 1s ease-out;
-        }
+#splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-out;
+}
 
-        #splash-circle {
-            width: 300px; 
-            height: 300px; 
-            background-color: #3498db;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+#splash-circle {
+    width: 300px; 
+    height: 300px; 
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        #splash-screen h1 {
-            margin-top: 20px;
-            font-size: 2rem;
-            color: #333;
-        }
+#splash-screen h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #333;
+}
 
-        #main-content {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-            position: relative;
-        }
+#main-content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
 
-        #left-side {
-            width: calc(30% - 20px); 
-            min-width: 300px;
-            position: fixed;
-            height: 100%;
-            overflow: hidden;
-            background-color: #f4f4f4;
-            padding: 20px; 
-            margin-top: 43px;
-        }
+#left-side {
+    width: calc(30% - 20px); 
+    min-width: 300px;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px; 
+    margin-top: 43px;
+}
 
-        #right-side {
-            width: calc(70% - 20px); 
-            margin-left: calc(30% + 20px); 
-            padding: 20px;
-            overflow-y: auto;
-            height: 100vh;
-            margin-top: 43px;
-        }
+#right-side {
+    width: calc(70% - 20px); 
+    margin-left: calc(30% + 20px); 
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    margin-top: 43px;
+}
 
-        #target-circle {
-            width: 150px; 
-            height: 150px;
-            background-color: #3498db;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            transform: translate(0, 0) scale(0); 
-            transition: transform 1s ease; 
-        }
+#target-circle {
+    width: 150px; 
+    height: 150px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transform: translate(0, 0) scale(0); 
+    transition: transform 1s ease; 
+}
 
-        @keyframes circle-move {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(0);
-            }
-        }
+@keyframes circle-move {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
 
-        /* 네비게이션 스타일 */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 12px 0;
-            text-align: center;
-            z-index: 100;
-        }
+/* 네비게이션 스타일 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    z-index: 100;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            border-bottom: none;
-        }
-        
-        nav a:hover {
-            text-decoration: none;
-        }
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: none;
+}
 
-        /* 수정된 스타일 */
-        #right-side h2 {
-            border-bottom: 1px solid #ccc; /* 밑줄 추가 */
-            padding-bottom: 10px; /* 밑줄과의 간격 조정 */
-        }
+nav a:hover {
+    text-decoration: none;
+}
 
-        .content-box {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px; /* 위쪽 여백 추가 */
-        }
+/* 수정된 스타일 */
+#right-side h2 {
+    border-bottom: 1px solid #ccc; /* 밑줄 추가 */
+    padding-bottom: 10px; /* 밑줄과의 간격 조정 */
+}
 
-        .thumbnail-area {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+.content-box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px; /* 위쪽 여백 추가 */
+}
 
-        .thumbnail {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            background-color: #ccc;
-            margin-right: 20px;
-        }
+.thumbnail-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-        .thumbnail-description {
-            flex: 1;
-        }
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #ccc;
+    margin-right: 20px;
+}
 
-        .text-area {
-            margin-top: 20px;
-        }
+.thumbnail-description {
+    flex: 1;
+}
 
-        .text-area .text-content {
-            width: 97%;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+.text-area {
+    margin-top: 20px;
+}
 
-        /* 다크 모드 스타일 */
-        body.dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
+.text-area .text-content {
+    width: 97%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
 
-        .dark-mode #splash-circle {
-            background-color: #1a1a1a;
-        }
+/* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
+@media (max-width: 1024px) {
+    #main-content {
+        flex-direction: column;
+    }
 
-        .dark-mode #splash-screen h1 {
-            color: #ccc;
-        }
+    #left-side {
+        width: calc(100% - 20px); /* 오른쪽 여백 추가 */
+        position: static;
+        margin-top: 0;
+        margin-bottom: 20px; /* 아래 여백 추가 */
+    }
 
-        .dark-mode #main-content {
-            background-color: #1a1a1a;
-            color: #fff;
-        }
+    #right-side {
+        width: calc(100% - 20px); /* 왼쪽 여백과 동일한 값으로 설정 */
+        margin-left: 0;
+        margin-right: 20px; /* 오른쪽 여백 추가 */
+    }
+}
 
-        .dark-mode nav {
-            background-color: #111;
-        }
+/* 다크 모드 스타일 */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
 
-        .dark-mode nav a {
-            color: #fff;
-        }
+.dark-mode #splash-screen h1 {
+    color: #fff;
+}
 
-        .dark-mode #left-side {
-            background-color: #333;
-            color: #fff;
-        }
+.dark-mode #main-content {
+    background-color: #333;
+}
 
-        .dark-mode #right-side {
-            background-color: #333;
-            color: #fff;
-        }
+.dark-mode #left-side {
+    background-color: #555;
+}
 
-        /* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
-        @media (max-width: 1024px) {
-            #main-content {
-                flex-direction: column;
-            }
-        
-            #left-side {
-                width: calc(100% - 20px); /* 오른쪽 여백 추가 */
-                position: static;
-                margin-top: 0;
-                margin-bottom: 20px; /* 아래 여백 추가 */
-            }
-        
-            #right-side {
-                width: calc(100% - 20px); /* 왼쪽 여백과 동일한 값으로 설정 */
-                margin-left: 0;
-                margin-right: 20px; /* 오른쪽 여백 추가 */
-            }
-        }
+.dark-mode #right-side {
+    background-color: #666;
+}
+
+.dark-mode nav {
+    background-color: #444;
+}
+
+.dark-mode nav a {
+    color: #fff;
+}
+
+.dark-mode .content-box {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .thumbnail {
+    background-color: #666;
+}
+    /* 다크 모드 토글 버튼 스타일 */
+    #dark-mode-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    #dark-mode-toggle:hover {
+        background-color: #555;
+    }
     </style>
 </head>
 <body>
+
     <div id="splash-screen">
         <div id="splash-circle"></div>
         <h1>Welcome to My Website</h1>
     </div>
     <div id="main-content">
+        <!-- 네비게이션 바 추가 -->
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -250,6 +274,10 @@
         <div id="left-side">
             <div id="target-circle"></div>
             <p>안녕하세요! <br>웹디자이너<br>권민지 입니다.</p>
+            <!-- 새로 추가된 텍스트 영역 -->
+            <div class="additional-text">
+                <p>사용자의 공감을 바탕으로 서비스를 경험하며 느끼는 모든 사용 경험을 설계하고 사용자들이 불편함을 겪는 부분을 찾아내서 정량적 정성적 데이터를 바탕으로 문제를 해결하는 역할을 잘 해낼 수 있습니다.</p>
+            </div>
         </div>
         <div id="right-side">
             <h2>Work Experience.</h2>
@@ -267,33 +295,59 @@
             </div>
         </div>
     </div>
+    <!-- 다크 모드 토글 버튼 -->
+    <button id="dark-mode-toggle"></button>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                let splashScreen = document.getElementById('splash-screen');
-                let splashCircle = document.getElementById('splash-circle');
-                let targetCircle = document.getElementById('target-circle');
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        let splashScreen = document.getElementById('splash-screen');
+        let splashCircle = document.getElementById('splash-circle');
+        let targetCircle = document.getElementById('target-circle');
 
-                // Start the circle move animation
-                splashCircle.style.animation = 'circle-move 1s forwards';
+        // Start the circle move animation
+        splashCircle.style.animation = 'circle-move 1s forwards';
 
-                // Wait for the animation to complete before hiding the splash screen and showing the main content
-                splashCircle.addEventListener('animationend', function() {
-                    splashScreen.style.opacity = 0;
-                    splashScreen.addEventListener('transitionend', function() {
-                        splashScreen.style.display = 'none';
-                        targetCircle.style.transform = 'translate(0, 0) scale(1)';
-                        document.getElementById('main-content').style.display = 'flex';
-                    });
-                });
-
-                // 추가: 메인 화면으로 이동하면서 크기를 조절하는 애니메이션
-                targetCircle.style.transform = 'translate(0, 0) scale(0)'; // 초기 크기 조절
-                setTimeout(function() {
-                    targetCircle.style.transform = 'translate(0, 0) scale(1)'; // 최종 크기 조절
-                }, 1000); // 1초 후 시작하여 1초 동안 애니메이션 진행
-            }, 3000); // 2초 후 실행합니다.
+        // Wait for the animation to complete before hiding the splash screen and showing the main content
+        splashCircle.addEventListener('animationend', function() {
+            splashScreen.style.opacity = 0;
+            splashScreen.addEventListener('transitionend', function() {
+                splashScreen.style.display = 'none';
+                targetCircle.style.transform = 'translate(0, 0) scale(1)';
+                document.getElementById('main-content').style.display = 'flex';
+            });
         });
+
+        // 추가: 메인 화면으로 이동하면서 크기를 조절하는 애니메이션
+        targetCircle.style.transform = 'translate(0, 0) scale(0)'; // 초기 크기 조절
+        setTimeout(function() {
+            targetCircle.style.transform = 'translate(0, 0) scale(1)'; // 최종 크기 조절
+        }, 1000); // 1초 후 시작하여 1초 동안 애니메이션 진행
+
+        // 다크 모드 토글 버튼 클릭 이벤트 처리
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '라이트 모드';
+            } else {
+                darkModeToggle.textContent = '다크 모드';
+            }
+        });
+
+        // 다크 모드일 때 JavaScript 코드 적용
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        function toggleDarkMode(darkModeMediaQuery) {
+            if (darkModeMediaQuery.matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+        darkModeMediaQuery.addListener(toggleDarkMode);
+        toggleDarkMode(darkModeMediaQuery);
+    }, 1000); // 3초 후 실행합니다.
+});
     </script>
 </body>
 </html>
