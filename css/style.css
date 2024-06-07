@@ -211,11 +211,13 @@ nav a:hover {
         width: calc(100% - 20px);
         position: static;
         margin:0 auto;
+        padding:0;
     }
 
     #right-side {
         width: calc(100% - 20px);
         margin:0 auto;
+        padding:0;
     }
 }
 
