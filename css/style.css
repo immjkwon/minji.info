@@ -222,10 +222,10 @@
         background-color: #333;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 8px 12px;
         border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 12px;
         transition: background-color 0.3s ease;
     }
 
