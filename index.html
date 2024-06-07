@@ -170,33 +170,12 @@
             margin-top: 20px;
         }
 
-        .text-area textarea {
+        .text-area .text-content {
             width: 97%;
-            height: 200px;
             border-radius: 10px;
             border: 1px solid #ccc;
             padding: 10px;
-            resize: none;
         }
-        
-    @media (max-width: 768px) {
-        #main-content {
-            flex-direction: column;
-        }
-    
-        #left-side {
-            width: 100%;
-            position: static;
-            margin-top: 0;
-        }
-    
-        #right-side {
-            width: 100%;
-            margin-left: 0;
-            margin-top: 20px; /* left-side 아래 여백 추가 */
-        }
-    }
-
     </style>
 </head>
 <body>
@@ -227,7 +206,7 @@
                     </div>
                 </div>
                 <div class="text-area">
-                    <textarea placeholder="Write your content here..."></textarea>
+                    <div class="text-content">Write your content here...</div>
                 </div>
             </div>
         </div>
