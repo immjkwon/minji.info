@@ -203,13 +203,14 @@ nav a:hover {
 @media (max-width: 1024px) {
     #main-content {
         flex-direction: column;
+        margin:0 auto;
+        padding:0;
     }
 
     #left-side {
         width: calc(100% - 20px);
         position: static;
-        margin-top: 0;
-        margin-bottom: 20px;
+        margin:0 auto;
     }
 
     #right-side {
