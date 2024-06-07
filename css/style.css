@@ -214,24 +214,54 @@
         background-color: #666;
     }
 
-    /* 다크 모드 토글 버튼 스타일 */
-    #dark-mode-toggle {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 12px;
-        transition: background-color 0.3s ease;
-    }
+        /* 다크 모드 토글 스위치 슬라이더 스타일 */
+        .switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
-    #dark-mode-toggle:hover {
-        background-color: #555;
-    }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
 
     /* 추가 텍스트 애니메이션 스타일 */
     .additional-text p {
