@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/ico/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/ico/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/ico/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/ico/favicon-16x16.png">
@@ -33,7 +33,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
-        
+
         #splash-screen {
             position: fixed;
             width: 100%;
@@ -46,7 +46,7 @@
             z-index: 1000;
             transition: opacity 1s ease-out;
         }
-        
+
         #splash-circle {
             width: 300px; /* 크기를 300px로 늘립니다. */
             height: 300px; /* 크기를 300px로 늘립니다. */
@@ -57,31 +57,47 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        
+
         #splash-screen h1 {
             margin-top: 20px;
             font-size: 2rem;
             color: #333;
         }
-        
+
         #main-content {
-            display: none;
-            padding: 20px;
+            display: flex;
+            width: 100%;
+            height: 100vh;
             position: relative;
         }
-        
+
+        #left-side {
+            width: 30%;
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #right-side {
+            margin-left: 30%;
+            width: 70%;
+            padding: 20px;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
         #target-circle {
             width: 150px; /* 최종 크기를 150px로 설정합니다. */
             height: 150px; /* 최종 크기를 150px로 설정합니다. */
             background-color: #3498db;
             border-radius: 50%;
-            position: absolute;
-            top: 50px; /* Adjust as needed */
-            right: 50px; /* Adjust as needed */
-            transform: translate(-50%, -50%) scale(0); /* 초기 크기와 투명하게 설정합니다. */
+            margin-bottom: 20px;
+            transform: translate(0, 0) scale(0); /* 초기 크기와 투명하게 설정합니다. */
             transition: transform 1s ease; /* 크기 변화를 부드럽게 애니메이션합니다. */
         }
-        
+
         @keyframes circle-move {
             0% {
                 transform: translate(-50%, -50%) scale(1);
@@ -89,6 +105,29 @@
             100% {
                 transform: translate(-50%, -50%) scale(0);
             }
+        }
+
+        /* 네비게이션 스타일 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -99,39 +138,52 @@
         <h1>Welcome to My Website</h1>
     </div>
     <div id="main-content">
-    <!-- Your main content here -->
-        <div id="target-circle"></div>
-        <h2>Main Page</h2>
-        <p>This is the main content of the page.</p>
+        <!-- 네비게이션 바 추가 -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div id="left-side">
+            <div id="target-circle"></div>
+            <p>This is some text under the target circle. This section remains fixed as you scroll.</p>
+        </div>
+        <div id="right-side">
+            <h2>Main Page</h2>
+            <p>This is the main content of the page.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.</p>
+            <!-- More content here -->
+        </div>
     </div>
 
     <script>
-   document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            let splashScreen = document.getElementById('splash-screen');
-            let splashCircle = document.getElementById('splash-circle');
-            let targetCircle = document.getElementById('target-circle');
-            
-            // Start the circle move animation
-            splashCircle.style.animation = 'circle-move 1s forwards';
-    
-            // Wait for the animation to complete before hiding the splash screen and showing the main content
-            splashCircle.addEventListener('animationend', function() {
-                splashScreen.style.opacity = 0;
-                splashScreen.addEventListener('transitionend', function() {
-                    splashScreen.style.display = 'none';
-                    targetCircle.style.transform = 'translate(50%, 50%) scale(1)';
-                    document.getElementById('main-content').style.display = 'block';
-                });
-            });
-            
-            // 추가: 메인 화면으로 이동하면서 크기를 조절하는 애니메이션
-            targetCircle.style.transform = 'translate(50%, 50%) scale(0)'; // 초기 크기 조절
+        document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
-                targetCircle.style.transform = 'translate(50%, 50%) scale(1)'; // 최종 크기 조
-                 }, 1000); // 1초 후 시작하여 1초 동안 애니메이션 진행
-                    }, 3000); // 3초 후 실행합니다.
+                let splashScreen = document.getElementById('splash-screen');
+                let splashCircle = document.getElementById('splash-circle');
+                let targetCircle = document.getElementById('target-circle');
+
+                // Start the circle move animation
+                splashCircle.style.animation = 'circle-move 1s forwards';
+
+                // Wait for the animation to complete before hiding the splash screen and showing the main content
+                splashCircle.addEventListener('animationend', function() {
+                    splashScreen.style.opacity = 0;
+                    splashScreen.addEventListener('transitionend', function() {
+                        splashScreen.style.display = 'none';
+                        targetCircle.style.transform = 'translate(0, 0) scale(1)';
+                        document.getElementById('main-content').style.display = 'flex';
+                    });
                 });
-            </script>
+
+                // 추가: 메인 화면으로 이동하면서 크기를 조절하는 애니메이션
+                targetCircle.style.transform = 'translate(0, 0) scale(0)'; // 초기 크기 조절
+                setTimeout(function() {
+                    targetCircle.style.transform = 'translate(0, 0) scale(1)'; // 최종 크기 조절
+                }, 1000); // 1초 후 시작하여 1초 동안 애니메이션 진행
+            }, 3000); // 3초 후 실행합니다.
+        });
+    </script>
 </body>
 </html>
