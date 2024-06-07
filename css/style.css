@@ -1,67 +1,228 @@
 /* style.css */
 /* 이 CSS 파일은 민지 포트폴리오 페이지의 스타일을 정의합니다. */
 /* 작성자: 민지 */
-@font-face {
-    font-family: 'YClover-Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
- html, body {
-        position: relative;
-        height: 100%;
-    }
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif,YClover-Bold;
-        font-size: 14px;
-        color:#fff;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-.swiper-pagination-bullet-active{
-  background-color:#fff;
+body {
+margin: 0;
+padding: 0;
+font-family: 'Noto Sans','Open Sans','Roboto', Arial, sans-serif;
+transition: background-color 0.5s, color 0.5s;
 }
 
-.color-1{
-  background-color:#f44336;
+#splash-screen {
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+transition: opacity 1s ease-out;
 }
-.color-2{
-  background-color:#E91E63;
+
+#splash-circle {
+width: 300px; 
+height: 300px; 
+background-color: #3498db;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
-.color-3{
-  background-color:#9C27B0;
+
+#splash-screen h1 {
+margin-top: 20px;
+font-size: 2rem;
+color: #333;
 }
-.color-4{
-  background-color:#673AB7;
+
+#main-content {
+display: flex;
+width: 100%;
+height: 100vh;
+position: relative;
 }
-.color-5{
-  background-color:#3F51B5;
+
+#left-side {
+width: calc(30% - 20px); 
+min-width: 300px;
+position: fixed;
+height: 100%;
+overflow: hidden;
+background-color: #f4f4f4;
+padding: 20px; 
+margin-top: 43px;
 }
-.color-6{
-  background-color:#2196F3;
+
+#right-side {
+width: calc(70% - 20px); 
+margin-left: calc(30% + 20px); 
+padding: 20px;
+overflow-y: auto;
+height: 100vh;
+margin-top: 43px;
+}
+
+#target-circle {
+width: 150px; 
+height: 150px;
+background-color: #3498db;
+border-radius: 50%;
+margin-bottom: 20px;
+transform: translate(0, 0) scale(0); 
+transition: transform 1s ease; 
+}
+
+@keyframes circle-move {
+0% {
+transform: translate(-50%, -50%) scale(1);
+}
+100% {
+transform: translate(-50%, -50%) scale(0);
+}
+}
+
+/* 네비게이션 스타일 */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background-color: #333;
+color: white;
+padding: 12px 0;
+text-align: center;
+z-index: 100;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-size: 0.9rem;
+border-bottom: none;
+}
+
+nav a:hover {
+text-decoration: none;
+}
+
+/* 수정된 스타일 */
+#right-side h2 {
+border-bottom: 1px solid #ccc; /* 밑줄 추가 */
+padding-bottom: 10px; /* 밑줄과의 간격 조정 */
+}
+
+.content-box {
+background-color: #f9f9f9;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px; /* 위쪽 여백 추가 */
+}
+
+.thumbnail-area {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.thumbnail {
+width: 100px;
+height: 100px;
+border-radius: 10px;
+background-color: #ccc;
+margin-right: 20px;
+}
+
+.thumbnail-description {
+flex: 1;
+}
+
+.text-area {
+margin-top: 20px;
+}
+
+.text-area .text-content {
+width: 97%;
+border-radius: 10px;
+border: 1px solid #ccc;
+padding: 10px;
+}
+
+/* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
+@media (max-width: 1024px) {
+#main-content {
+flex-direction: column;
+}
+
+#left-side {
+width: calc(100% - 20px); /* 오른쪽 여백 추가 */
+position: static;
+margin-top: 0;
+margin-bottom: 20px; /* 아래 여백 추가 */
+}
+
+#right-side {
+width: calc(100% - 20px); /* 왼쪽 여백과 동일한 값으로 설정 */
+margin-left: 0;
+margin-right: 20px; /* 오른쪽 여백 추가 */
+}
+}
+
+/* 다크 모드 스타일 */
+.dark-mode {
+background-color: #333;
+color: #fff;
+}
+
+.dark-mode #splash-screen h1 {
+color: #fff;
+}
+
+.dark-mode #main-content {
+background-color: #333;
+}
+
+.dark-mode #left-side {
+background-color: #555;
+}
+
+.dark-mode #right-side {
+background-color: #666;
+}
+
+.dark-mode nav {
+background-color: #444;
+}
+
+.dark-mode nav a {
+color: #fff;
+}
+
+.dark-mode .content-box {
+background-color: #444;
+color: #fff;
+}
+
+.dark-mode .thumbnail {
+background-color: #666;
+}
+/* 다크 모드 토글 버튼 스타일 */
+#dark-mode-toggle {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #333;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+background-color: #555;
 }
