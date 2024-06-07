@@ -176,6 +176,23 @@
             border: 1px solid #ccc;
             padding: 10px;
         }
+        @media (max-width: 768px) {
+            #main-content {
+                flex-direction: column;
+            }
+        
+            #left-side {
+                width: 100%;
+                position: static;
+                margin-top: 0;
+                margin-bottom: 20px; /* 아래 여백 추가 */
+            }
+        
+            #right-side {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
