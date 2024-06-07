@@ -114,7 +114,7 @@
         text-decoration: none;
     }
 
-    /* 수정된 스타일 */
+
     #right-side h2 {
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
@@ -156,16 +156,16 @@
         padding: 10px;
     }
 
-        #introduction {
-            font-size: 24px; /* 폰트 크기 설정 */
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    #introduction {
+        font-size: 36px; 
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-        .additional-text p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
+    .additional-text p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
 
 
     /* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
@@ -227,56 +227,56 @@
         background-color: #666;
     }
 
-        /* 다크 모드 토글 스위치 슬라이더 스타일 */
-        .switch {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
+    /* 다크 모드 토글 스위치 슬라이더 스타일 */
+    .switch {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
 
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
 
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
 
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
 
-        input:checked + .slider {
-            background-color: #2196F3;
-        }
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
 
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
 
 
-    /* 추가 텍스트 애니메이션 스타일 */
+    /* 텍스트 애니메이션 스타일 */
     .additional-text p {
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
