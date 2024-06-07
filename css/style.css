@@ -156,6 +156,18 @@
         padding: 10px;
     }
 
+        #introduction {
+            font-size: 24px; /* 폰트 크기 설정 */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .additional-text p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+
     /* 모바일과 태블릿 화면에 대한 미디어 쿼리 */
     @media (max-width: 1024px) {
         #main-content {
