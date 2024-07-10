@@ -311,3 +311,60 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
 }
+
+/* Portfolio 및 Contact 섹션 스타일 추가 */
+/* Portfolio 섹션 스타일 */
+#portfolio {
+    padding: 2em;
+    background-color: #f4f4f4;
+    margin: 2em 0;
+}
+
+#portfolio h2 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    color: #333;
+}
+
+.portfolio-item {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact 섹션 스타일 */
+#contact {
+    padding: 2em;
+    background-color: #f4f4f4;
+    margin: 2em 0;
+}
+
+#contact h2 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5em 0;
+}
+
+/* 스크롤 애니메이션 */
+html {
+    scroll-behavior: smooth;
+}
