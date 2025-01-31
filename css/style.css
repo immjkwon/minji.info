@@ -188,9 +188,6 @@ nav a:hover {
     .icon-link:hover {
         color: #D96B6B;
     }
-    .icon-link span {
-        margin-left: 8px;
-    }
 
 /* 미디어 쿼리: 모바일 및 태블릿 화면 */
 @media (max-width: 1024px) {
