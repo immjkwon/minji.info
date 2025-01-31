@@ -196,6 +196,7 @@ nav a:hover {
     .additional-text p {
         font-size: 14px;
     }    
+    .switch{bottom: 10px; right: 10px; }
 }
 
 
