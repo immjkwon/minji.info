@@ -7,7 +7,7 @@ body {
     color:#191919;
     font-size: 16px;
 }
-
+a {text-decoration: none;}
 button, #dark-mode-toggle { 
     font-family: 'Noto Sans', 'Open Sans', 'Roboto', Arial, sans-serif !important; 
 }
