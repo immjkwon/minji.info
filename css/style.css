@@ -122,7 +122,8 @@ nav a:hover {
     background-color: #ccc;   
     color: white;             
     text-align: center;       
-    font-size: 18px;          
+    font-size: 14px;     
+    border-radius: 15px;
 }
 
 .thumbnail-description {
