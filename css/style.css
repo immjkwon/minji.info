@@ -1,263 +1,103 @@
 /* style.css */
 /* 이 CSS 파일은 민지 포트폴리오 페이지의 스타일을 정의합니다. */
 /* 작성자: 민지 */
-body { 
-    margin: 0; 
-    padding: 0; 
-    font-family: 'Pretendard', sans-serif, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; 
-    transition: background-color 0.5s, color 0.5s; 
-    color:#191919; 
-}
-
-button, #dark-mode-toggle { 
-    font-family: 'Noto Sans', 'Open Sans', 'Roboto', Arial, sans-serif !important; 
-}
-
-#main-content { 
-    display: flex; 
-    width: 100%; 
-    height: 100vh; 
-    position: relative; 
-}
-
-#left-side { 
-    width: calc(30% - 20px); 
-    min-width: 250px; 
-    position: fixed; 
-    height: 100%; 
-    overflow: hidden; 
-    padding: 20px; 
-    margin-top: 43px; 
-}
-
-#right-side { 
-    width: calc(70% - 20px); 
-    margin-left: calc(30% + 20px); 
-    padding: 20px; 
-    overflow-y: auto; 
-    margin-top: 43px; 
-}
-
-nav { 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background-color: #333; 
-    color: white; 
-    padding: 12px 0; 
-    text-align: center; 
-    z-index: 100; 
-}
-
-nav a { 
-    color: white; 
-    margin: 0 15px; 
-    text-decoration: none; 
-    font-size: 0.9rem; 
-}
-
-nav a:hover { 
-    text-decoration: none; 
-}
-
-#right-side h2 { 
-    border-bottom: 1px solid #ccc; 
-    padding-bottom: 10px; 
-    margin:20px;
-}
-
-.content-box { 
-    background-color: #f9f9f9; 
-    border-radius: 10px; 
-    padding: 20px; 
-    margin: 20px; 
-}
-
-.thumbnail-area { 
-    display: flex; 
-    align-items: center; 
-    margin-bottom: 20px; 
-}
-
-.thumbnail-link { 
-    display: block; 
-}
-
-.thumbnail { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 100px; 
-    height: 100px; 
-    background-color: #ccc; 
-    color: white; 
-    text-align: center; 
-    font-size: 14px; 
-    border-radius: 15px; 
-    margin-right: 20px; 
-}
-
-.thumbnail-description { 
-    flex: 1; 
-}
-
-.text-area { 
-    margin-top: 20px; 
-}
-
-.text-area .text-content { 
-    width: 97%; 
-    border-radius: 10px; 
-    border: 1px solid #ccc; 
-    padding: 10px; 
-}
-
-#introduction { 
-    font-size: 36px; 
-    font-weight: bold; 
-    margin: 30px; 
-}
-
-#introduction p { 
-    line-height: 1.3; 
-    margin: 14px 0; 
-}
-
-.additional-text { 
-    margin: 30px; 
-}
-
-.additional-text p { 
-    font-size: 16px; 
-    margin: 12px 0; 
-    line-height: 1.5; 
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out; 
-}
-
-.additional-text.show p { 
-    opacity: 1; 
-}
-
-.additional-text.show p:nth-child(1) { 
-    transition-delay: 0s; 
-}
-
-.additional-text.show p:nth-child(2) { 
-    transition-delay: 0.5s; 
-}
-
-.additional-text.show p:nth-child(3) { 
-    transition-delay: 1s; 
-}
-
-.icon-link { 
-    color: #BF0A18; 
-    font-weight: bold; 
-    text-decoration: none; 
-    cursor: pointer; 
-}
-
-.icon-link:hover { 
-    color: #D96B6B; 
-}
+body { margin: 0; padding: 0; font-family: 'Pretendard', sans-serif, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; transition: background-color 0.5s, color 0.5s; color: #191919; } 
+button, #dark-mode-toggle { font-family: 'Noto Sans', 'Open Sans', 'Roboto', Arial, sans-serif !important; } 
+#main-content { display: flex; width: 100%; height: 100vh; position: relative; } 
+#left-side { width: calc(30% - 20px); min-width: 250px; position: fixed; height: 100%; overflow: hidden; padding: 20px; margin-top: 43px; } 
+#right-side { width: calc(70% - 20px); margin-left: calc(30% + 20px); padding: 20px; overflow-y: auto; margin-top: 43px; } 
+nav { position: fixed; top: 0; width: 100%; background-color: #333; color: white; padding: 12px 0; text-align: center; z-index: 100; } 
+nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 0.9rem; } 
+nav a:hover { text-decoration: none; } 
+#right-side h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin: 20px; } 
+.content-box { background-color: #f9f9f9; border-radius: 10px; padding: 20px; margin: 20px; } 
+.thumbnail-area { display: flex; align-items: center; margin-bottom: 20px; } 
+.thumbnail-link { display: block; } 
+.thumbnail { display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; background-color: #ccc; color: white; text-align: center; font-size: 14px; border-radius: 15px; margin-right: 20px; } 
+.thumbnail-description { flex: 1; } 
+.text-area { margin-top: 20px; } 
+.text-area .text-content { width: 97%; border-radius: 10px; border: 1px solid #ccc; padding: 10px; } 
+#introduction { font-size: 36px; font-weight: bold; margin: 30px; } 
+#introduction p { line-height: 1.3; margin: 14px 0; } 
+.additional-text { margin: 30px; } 
+.additional-text p { font-size: 16px; margin: 12px 0; line-height: 1.5; opacity: 0; transition: opacity 0.5s ease-in-out; } 
+.additional-text.show p { opacity: 1; } 
+.additional-text.show p:nth-child(1) { transition-delay: 0s; } 
+.additional-text.show p:nth-child(2) { transition-delay: 0.5s; } 
+.additional-text.show p:nth-child(3) { transition-delay: 1s; } 
+.icon-link { color: #BF0A18; font-weight: bold; text-decoration: none; cursor: pointer; } 
+.icon-link:hover { color: #D96B6B; } 
+.dark-mode { background-color: #333; color: #fff; } 
+.dark-mode nav { background-color: #444; } 
+.dark-mode nav a { color: #fff; } 
+.dark-mode .content-box { background-color: #444; color: #fff; } 
+.dark-mode .thumbnail { background-color: #666; } 
+.switch { position: fixed; bottom: 20px; right: 20px; display: inline-block; width: 60px; height: 34px; } 
+.switch input { opacity: 0; width: 0; height: 0; } 
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; } 
+.slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; } 
+input:checked + .slider { background-color: #2196F3; } 
+input:checked + .slider:before { transform: translateX(26px); } 
+html { scroll-behavior: smooth; }
 
 @media (max-width: 1024px) { 
-    #main-content {
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 0;
+    body {
+        font-size: 14px; 
     }
 
-    #left-side {
-        width: calc(100% - 20px);
-        position: static;
-        margin: 0 auto;
-        padding: 0;
-        margin-top: 70px; 
+    nav a {
+        font-size: 0.9rem; 
     }
 
     #introduction {
+        font-size: 2rem; 
         margin-top: 60px; 
     }
-    #introduction p{font-size:28px;}
-    #right-side {
-        width: calc(100% - 20px);
-        margin: 0 auto;
-        padding: 0;
+    #introduction p{
+        font-size: 1.25rem; 
+    }
+
+    #right-side h2 {
+        font-size: 1.5rem; 
+    }
+
+    .thumbnail {
+        font-size: 0.8rem; 
+    }
+
+    .additional-text p {
+        font-size: 0.9rem;
     }
 }
 
-.dark-mode { 
-    background-color: #333; 
-    color: #fff; 
-}
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
 
-.dark-mode nav { 
-    background-color: #444; 
-}
+    nav a {
+        font-size: 0.8rem;
+    }
 
-.dark-mode nav a { 
-    color: #fff; 
-}
+    #introduction {
+        font-size: 1.75rem;
+        margin-top: 50px; 
+    }
 
-.dark-mode .content-box { 
-    background-color: #444; 
-    color: #fff; 
-}
+    #introduction p {
+        font-size: 1.1rem; 
+    }
 
-.dark-mode .thumbnail { 
-    background-color: #666; 
-}
+    #right-side h2 {
+        font-size: 1.25rem;
+    }
 
-.switch { 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    display: inline-block; 
-    width: 60px; 
-    height: 34px; 
-}
+    .thumbnail {
+        font-size: 0.7rem; 
+    }
 
-.switch input { 
-    opacity: 0; 
-    width: 0; 
-    height: 0; 
-}
-
-.slider { 
-    position: absolute; 
-    cursor: pointer; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    background-color: #ccc; 
-    transition: .4s; 
-    border-radius: 34px; 
-}
-
-.slider:before { 
-    position: absolute; 
-    content: ""; 
-    height: 26px; 
-    width: 26px; 
-    left: 4px; 
-    bottom: 4px; 
-    background-color: white; 
-    transition: .4s; 
-    border-radius: 50%; 
-}
-
-input:checked + .slider { 
-    background-color: #2196F3; 
-}
-
-input:checked + .slider:before { 
-    transform: translateX(26px); 
-}
-
-html { 
-    scroll-behavior: smooth; 
+    .additional-text p {
+        font-size: 0.8rem; 
+    }
 }
 
