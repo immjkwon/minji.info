@@ -7,7 +7,6 @@ body {
     font-family: 'Pretendard', sans-serif, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; 
     transition: background-color 0.5s, color 0.5s; 
     color:#191919; 
-    font-size: 16px; /* 기본 폰트 크기 */
 }
 
 button, #dark-mode-toggle { 
@@ -54,7 +53,7 @@ nav a {
     color: white; 
     margin: 0 15px; 
     text-decoration: none; 
-    font-size: 1rem; /* 기본 폰트 크기 */
+    font-size: 0.9rem; 
 }
 
 nav a:hover { 
@@ -93,7 +92,7 @@ nav a:hover {
     background-color: #ccc; 
     color: white; 
     text-align: center; 
-    font-size: 0.9rem; /* 기본 폰트 크기 */
+    font-size: 14px; 
     border-radius: 15px; 
     margin-right: 20px; 
 }
@@ -114,7 +113,7 @@ nav a:hover {
 }
 
 #introduction { 
-    font-size: 2.25rem; /* 기본 폰트 크기 */
+    font-size: 36px; 
     font-weight: bold; 
     margin: 30px; 
 }
@@ -129,7 +128,7 @@ nav a:hover {
 }
 
 .additional-text p { 
-    font-size: 1rem; /* 기본 폰트 크기 */
+    font-size: 16px; 
     margin: 12px 0; 
     line-height: 1.5; 
     opacity: 0; 
@@ -164,63 +163,28 @@ nav a:hover {
 }
 
 @media (max-width: 1024px) { 
-    body {
-        font-size: 14px; /* 모바일 화면 폰트 크기 */
+    #main-content {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
     }
 
-    nav a {
-        font-size: 0.9rem; /* 모바일 화면에서 폰트 크기 */
+    #left-side {
+        width: calc(100% - 20px);
+        position: static;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 70px; 
     }
 
     #introduction {
-        font-size: 2rem; /* 모바일 화면에서 폰트 크기 */
         margin-top: 60px; 
     }
-    #introduction p{
-        font-size: 1.25rem; /* 모바일 화면에서 폰트 크기 */
-    }
-
-    #right-side h2 {
-        font-size: 1.5rem; /* 모바일 화면에서 폰트 크기 */
-    }
-
-    .thumbnail {
-        font-size: 0.8rem; /* 모바일 화면에서 폰트 크기 */
-    }
-
-    .additional-text p {
-        font-size: 0.9rem; /* 모바일 화면에서 폰트 크기 */
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 12px; /* 더 작은 화면에서 폰트 크기 */
-    }
-
-    nav a {
-        font-size: 0.8rem; /* 더 작은 화면에서 폰트 크기 */
-    }
-
-    #introduction {
-        font-size: 1.75rem; /* 더 작은 화면에서 폰트 크기 */
-        margin-top: 50px; 
-    }
-
-    #introduction p {
-        font-size: 1.1rem; /* 더 작은 화면에서 폰트 크기 */
-    }
-
-    #right-side h2 {
-        font-size: 1.25rem; /* 더 작은 화면에서 폰트 크기 */
-    }
-
-    .thumbnail {
-        font-size: 0.7rem; /* 더 작은 화면에서 폰트 크기 */
-    }
-
-    .additional-text p {
-        font-size: 0.8rem; /* 더 작은 화면에서 폰트 크기 */
+    #introduction p{font-size:28px;}
+    #right-side {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding: 0;
     }
 }
 
