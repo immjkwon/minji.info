@@ -166,22 +166,7 @@
             }, 1000); // 1초 후 실행합니다.
         });
     </script>
-    <script>
-        document.addEventListener('scroll', function () {
-            const introduction = document.getElementById('introduction');
-            const introParagraphs = introduction.querySelectorAll('p');
-        
-            introParagraphs.forEach(p => {
-                const rect = p.getBoundingClientRect();
-                // p가 화면에 보일 때 visible 클래스를 추가
-                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                    p.classList.add('visible');
-                } else {
-                    p.classList.remove('visible'); // 다시 보이지 않으면 클래스를 제거
-                }
-            });
-        });
-    </script>
+
 </body>
 
 </html>
