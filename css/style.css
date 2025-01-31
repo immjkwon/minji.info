@@ -171,16 +171,15 @@ nav a:hover {
     #left-side {
         width: calc(100% - 20px);
         position: static;
-        margin: 0 auto;
+        margin: 70px auto;
         padding: 0;
-        margin-top: 70px; /* 여백을 추가해서 오른쪽 영역과 겹치지 않도록 합니다 */
     }
 
     #right-side {
         width: calc(100% - 20px);
         margin: 0 auto;
         padding: 0;
-        margin-top: 20px; /* 오른쪽 영역 위쪽 여백 추가 */
+        margin-top: 20px;
     }
 
     body {
