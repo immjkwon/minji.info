@@ -154,10 +154,12 @@ nav a:hover {
     font-weight: bold; 
     text-decoration: none; 
     cursor: pointer; 
+    text-decoration: underline;
 }
 
 .icon-link:hover { 
     color: #D96B6B; 
+    text-decoration: none;
 }
 .mobile-br {
     display: none;
