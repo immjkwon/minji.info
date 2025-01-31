@@ -166,6 +166,19 @@
             }, 1000); // 1초 후 실행합니다.
         });
     </script>
+    <script>
+            document.addEventListener('scroll', function () {
+            const introduction = document.getElementById('introduction');
+            const introParagraphs = introduction.querySelectorAll('p');
+    
+            introParagraphs.forEach(p => {
+                const rect = p.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                    p.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
