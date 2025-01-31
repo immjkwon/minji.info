@@ -164,22 +164,29 @@ nav a:hover {
 }
 
 @media (max-width: 1024px) { 
-    #main-content { 
-        flex-direction: column; 
-        margin: 0 auto; 
-        padding: 0; 
-    } 
-    #left-side { 
-        width: calc(100% - 20px); 
-        position: static; 
-        margin: 0 auto; 
-        padding: 0; 
-    } 
-    #right-side { 
-        width: calc(100% - 20px); 
-        margin: 0 auto; 
-        padding: 0; 
-    } 
+    #main-content {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #left-side {
+        width: calc(100% - 20px);
+        position: static;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 70px; /* 네비게이션 바 아래로 충분한 여백 추가 */
+    }
+
+    #introduction {
+        margin-top: 60px; /* 네비게이션 바와 겹치지 않게 여백 추가 */
+    }
+
+    #right-side {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding: 0;
+    }
 }
 
 .dark-mode { 
