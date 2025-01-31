@@ -233,6 +233,9 @@ nav a:hover {
     .additional-text p {
         font-size: 12px; 
     }
+    .thumbnail { 
+        font-size: 12px; 
+    }    
 }
 .dark-mode { 
     background-color: #333; 
