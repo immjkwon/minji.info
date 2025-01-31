@@ -159,7 +159,9 @@ nav a:hover {
 .icon-link:hover { 
     color: #D96B6B; 
 }
-
+.mobile-br {
+    display: none;
+}
 @media (max-width: 1024px) { 
     #main-content {
         flex-direction: column;
@@ -213,6 +215,9 @@ nav a:hover {
     }
     .additional-text p {
         font-size: 12px; 
+    }
+    .mobile-br {
+        display: block;
     }
 }
 
