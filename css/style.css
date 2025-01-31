@@ -117,13 +117,14 @@ nav a:hover {
     display: flex;
     justify-content: center;  
     align-items: center;      
-    width: 150px;             
+    width: 100px;             
     height: 100px;            
     background-color: #ccc;   
     color: white;             
     text-align: center;       
     font-size: 14px;     
     border-radius: 15px;
+    margin-right:20px;
 }
 
 .thumbnail-description {
