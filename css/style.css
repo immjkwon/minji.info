@@ -192,6 +192,7 @@ nav a:hover {
     #introduction p {
         font-size: 24px;
     }
+    .additional-text{margin:0;}
     .additional-text p {
         font-size: 14px;
     }    
