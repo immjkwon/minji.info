@@ -173,31 +173,31 @@ nav a:hover {
         position: static;
         margin: 0 auto;
         padding: 0;
-        margin-top: 70px; 
+        margin-top: 70px; /* 여백을 추가해서 오른쪽 영역과 겹치지 않도록 합니다 */
     }
 
-    #introduction {
-        margin-top: 60px; 
-    }
-    #introduction p{font-size:28px;}
     #right-side {
         width: calc(100% - 20px);
         margin: 0 auto;
         padding: 0;
+        margin-top: 20px; /* 오른쪽 영역 위쪽 여백 추가 */
     }
+
     body {
         font-size: 14px;
     }
+
     #introduction {
-        font-size: 30px; 
+        font-size: 30px;
     }
     #introduction p {
         font-size: 24px;
     }
     .additional-text p {
-        font-size: 14px; 
+        font-size: 14px;
     }    
 }
+
 
 /* 화면 크기가 768px 이하일 때 더 작은 폰트 크기 적용 */
 @media (max-width: 768px) {
