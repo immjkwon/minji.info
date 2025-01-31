@@ -27,7 +27,7 @@ button, #dark-mode-toggle {
     position: fixed; 
     height: 100%; 
     overflow: hidden; 
-    background-color: #f4f4f4; 
+    background-color: #666; 
     padding: 20px; 
     margin-top: 43px; 
 }
