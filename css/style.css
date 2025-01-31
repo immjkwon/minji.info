@@ -221,6 +221,9 @@ nav a:hover {
     body {
         font-size: 12px; 
     }
+    #left-side {
+        height:1200px;
+    }    
     #introduction {
         font-size: 18px;
     }
