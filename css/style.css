@@ -171,7 +171,7 @@ nav a:hover {
     #left-side {
         width: calc(100% - 20px);
         position: static;
-        margin: 70px auto;
+        margin: 70px auto 0 auto;
         padding: 0;
     }
 
