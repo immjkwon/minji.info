@@ -117,11 +117,11 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* 원하는 높이 설정 */
-    background-color: #ccc; /* 썸네일 배경색 */
-    color: white; /* 텍스트 색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    font-size: 18px; /* 폰트 크기 조정 */
+    height: 100px;
+    background-color: #ccc;
+    color: white; 
+    text-align: center; 
+    font-size: 16px; 
 }
 
 .thumbnail-description {
