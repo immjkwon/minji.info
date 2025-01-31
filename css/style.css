@@ -26,8 +26,8 @@ button,
 }
 
 #left-side {
-    width: calc(30% - 20px);
-    min-width: 300px;
+    width: calc(25% - 20px); 
+    min-width: 250px; 
     position: fixed;
     height: 100%;
     overflow: hidden;
